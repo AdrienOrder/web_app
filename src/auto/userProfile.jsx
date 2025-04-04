@@ -1,6 +1,7 @@
 // src/components/UserProfile.jsx
 import React from 'react'; // Импортируем React для создания компонента
-import { useAuth } from '../auto/AuthContext'; // Импортируем хук useAuth для доступа к данным о пользователе и аутентификации в контексте
+import { useAuth } from '../auto/AuthContext'; // Импортируем хук useAuth для доступа к данным о пользователе и аутентификации 
+// в контексте
 
 // Этот компонент будет отображать информацию о пользователе
 const UserProfile = () => {
