@@ -9,7 +9,7 @@ const AuthContainer = () => {
     const { isAuthenticated } = useAuth(); // Получаем статус аутентификации пользователя из контекста
     const [isLogin, setIsLogin] = useState(true); // создаем состояние isLogin, которое по умолчанию установлено в true, 
     // что означает, что форма будет отображать авторизацию. Функция setIsLogin используется для обновления этого состояния
-    const { isDarkTheme } = useTheme(); // Получаем информацию о текущей теме из контекста темы
+    const { isDarkTheme } = useTheme(); // Получаем информацию о текущей теме из контекста темы 
 
     return (
         <div className={`auth-container ${isDarkTheme ? 'dark' : 'light'}`}>
