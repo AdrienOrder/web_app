@@ -1,34 +1,28 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react'; // Импортируем необходимые функции из библиотеки React
 
-// Создаем контекст для отзывов, который будет использоваться для хранения и передачи данных о отзывах в приложении
-// Контекст позволяет передавать данные через дерево компонентов без необходимости передавать их через пропсы на каждом уровне
-const FeedbackContext = createContext();
+// Создаем контекст для обратной связи
+const FeedbackContext = createContext(); 
 
-// Создаёт компонент FeedbackProvider, который будет контекстным провайдером для FeedbackContext
-// Принимает children, что позволяет провайдеру оборачивать другие компоненты и предоставлять им доступ к контексту
+// Создаем провайдер для FeedbackContext
 export const FeedbackProvider = ({ children }) => {
-    const [feedbacks, setFeedbacks] = useState([]); // Инициализирует состояние feedbacks с помощью хука useState. 
-    // По умолчанию оно является пустым массивом. setFeedbacks — функция для обновления состояния
-
-    // Определяет функцию addFeedback, которая принимает объект отзыва
-    // Когда вызывается эта функция, вызывает setFeedbacks, чтобы обновить состояние
-    // Новый отзыв добавляется в конец предыдущего массива отзывов с помощью оператора расширения
+    // Используем хук useState для хранения массива отзывов
+    const [feedbacks, setFeedbacks] = useState([]); 
+    
+    // Функция для добавления нового отзыва
     const addFeedback = (feedback) => {
+        // Обновляем состояние отзывов, добавляя новый отзыв в массив
         setFeedbacks(prevFeedbacks => [...prevFeedbacks, feedback]);
     };
 
-    // Возвращает JSX-разметку, где FeedbackContext.Provider оборачивает children. 
-    // Значение, передаваемое через value, включает массив отзывов и функцию для их добавления, 
-    // чтобы дочерние получили доступ к данным
+    // Возвращаем провайдер контекста с доступными значениями
     return (
         <FeedbackContext.Provider value={{ feedbacks, addFeedback }}>
-            {children}
+            {children} {/* Отображаем дочерние компоненты внутри провайдера */}
         </FeedbackContext.Provider>
     );
 };
 
-// Создаёт кастомный хук useFeedback, который использует useContext для доступа к FeedbackContext
-// Это позволяет другим компонентам легко использовать контекст, не имея необходимости явно передавать его через пропсы
+// Создаем пользовательский хук для доступа к FeedbackContext
 export const useFeedback = () => {
-    return useContext(FeedbackContext);
+    return useContext(FeedbackContext); // Возвращаем значение контекста
 };

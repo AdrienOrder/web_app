@@ -17,6 +17,7 @@ const FeedbackList = () => {
             {validFeedbacks.length > 0 && <h3>Отзывы:</h3>} {/* если есть хотя бы один валидный отзыв 
             (длина массива validFeedbacks больше 0), рендерится заголовок */}
             {validFeedbacks.map((feedback, index) => ( // использует метод map, чтобы пройтись по массиву validFeedbacks, 
+            // создавая для каждого отзыва JSX-элементы
                 <div key={index} className="feedback-item"> {/* для каждого отзыва создается новый элемент. Значение key={index} 
                 устанавливается для уникальности каждого элемента в списке */}
                     <p className="feedback-name">{feedback.name}:</p> {/* создает элемент параграфа для имени автора отзыва */}
