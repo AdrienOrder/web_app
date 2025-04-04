@@ -27,6 +27,6 @@ const FeedbackList = () => {
             ))}
         </div>
     );
-}; // завершает определение компонента FeedbackList и возвращает JSX, который будет отображаться на экране
+};
 
 export default FeedbackList;

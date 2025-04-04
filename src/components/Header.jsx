@@ -1,9 +1,9 @@
 // components/Header.js
-import React from 'react';
-import Menu from './Menu';
-import { useTheme } from '../ThemeContext';
-import { useAuth } from '../auto/AuthContext';
-import '../components/Header.css';
+import React from 'react'; // Импортируем React для создания компонентов
+import Menu from './Menu'; // Импортируем компонент Menu для отображения меню навигации
+import { useTheme } from '../ThemeContext'; // Импортируем хук useTheme для доступа к информации о теме
+import { useAuth } from '../auto/AuthContext'; // Импортируем хук useAuth для работы с аутентификацией пользователя
+import '../components/Header.css'; // Импортируем стили для компонента Header
 import { useNavigate } from 'react-router-dom'; // Импортируем для маршрутизации
 
 const Header = () => {
@@ -26,13 +26,15 @@ const Header = () => {
             </button>
             {isAuthenticated ? (
                 <>
-                    <span className="user-email" onClick={handleEmailClick}>
-                        {userEmail}
+                    <span className="user-email" onClick={handleEmailClick}> {/* Отображаем email пользователя, 
+                    который можно кликнуть */}
+                        {userEmail} {/* Email пользователя */}
                     </span>
-                    <button className="logout-button" onClick={logout}>Выйти</button>
+                    <button className="logout-button" onClick={logout}>Выйти</button> {/* Кнопка выхода из аккаунта */}
                 </>
             ) : (
-                <button className="auth-button" onClick={() => alert('Заполните форму')}>Войти</button>
+                <button className="auth-button" onClick={() => alert('Заполните форму')}>Войти</button> 
+                // Кнопка для входа из аккаунта
             )}
         </header>
     );

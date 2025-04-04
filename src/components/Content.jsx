@@ -1,12 +1,13 @@
+
 // components/Content.js
-import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // используются для определения маршрутов
-import '../components/Content.css';
-import { useTheme } from '../ThemeContext';
-import { useAuth } from '../auto/AuthContext';
-import Counter from './Counter';
-import AuthContainer from '../auto/AuthContainer';
-import UserProfile from '../auto/userProfile';
+import React from 'react'; // Импортируем React для создания компонентов
+import { Routes, Route } from 'react-router-dom'; // Импортируем компоненты для определения маршрутов
+import '../components/Content.css'; // Импортируем стили для компонента Content
+import { useTheme } from '../ThemeContext'; // Импортируем хук useTheme для доступа к теме приложения
+import { useAuth } from '../auto/AuthContext'; // Импортируем хук useAuth для доступа к данным аутентификации
+import Counter from './Counter'; // Импортируем компонент Counter
+import AuthContainer from '../auto/AuthContainer'; // Импортируем компонент для аутентификации
+import UserProfile from '../auto/userProfile'; // Импортируем компонент профиля пользователя
 
 const labWorks = [ // определяет массив объектов labWorks, где каждый объект представляет собой лабораторную работу с id, 
 // именем изображения и заголовком
@@ -24,19 +25,19 @@ const labWorks = [ // определяет массив объектов labWork
 const LabWork = ({ lab }) => { // пределяет функциональный компонент LabWork, который принимает пропс lab. Этот компонент 
 // будет отображать детали конкретной лабораторной работы
     return (
-        <div>
-            <h3>{lab.caption}</h3>
-            <img className="slider-image" src={lab.image} alt={lab.caption} />
+        <div> {/* Контейнер для отображения информации о лабораторной работе */}
+            <h3>{lab.caption}</h3> {/* Заголовок с названием лабораторной работы */}
+            <img className="slider-image" src={lab.image} alt={lab.caption} /> {/* Изображение лабораторной работы с альтернативным текстом */}
         </div>
     );
 };
 
 const Content = () => {
-    const { isDarkTheme } = useTheme();
-    const { isAuthenticated } = useAuth();
+    const { isDarkTheme } = useTheme(); // Получаем состояние темы (темная или светлая) из контекста темы
+    const { isAuthenticated } = useAuth(); // Получаем состояние аутентификации пользователя из контекста аутентификации
 
     return (
-        <div className={`content ${isDarkTheme ? 'dark' : 'light'}`}>
+        <div className={`content ${isDarkTheme ? 'dark' : 'light'}`}> {/* Контейнер с классом в зависимости от темы */}
             {isAuthenticated ? (
                 <>
                     <Routes>

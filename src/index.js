@@ -1,13 +1,13 @@
-import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React, { StrictMode } from 'react'; // Импортируем библиотеку React и компонент StrictMode для проверки на наличие проблем в приложении
+import ReactDOM from 'react-dom/client'; // Импортируем библиотеку ReactDOM для работы с DOM в приложении React
+import App from './App'; // Импортируем основной компонент приложения App
 
-// Получаем корневой элемент
+// Получаем корневой элемент из DOM, в который будет монтироваться приложение
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// Рендерим приложение
+// Рендерим приложение внутри корневого элемента
 root.render(
-    <StrictMode>
-        <App />
+    <StrictMode> {/* Включаем строгий режим для выявления потенциальных проблем в коде */}
+        <App /> {/* Вставляем основной компонент приложения App */}
     </StrictMode>
 );

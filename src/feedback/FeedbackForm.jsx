@@ -1,10 +1,8 @@
-import React, { useCallback } from 'react'; // используется для оптимизации производительности при передаче функций, 
-// предотвращая их пересоздание при каждом рендере
-import { useForm } from 'react-hook-form';
-import { useFeedback } from './FeedbackContext'; // позволяет использовать контекст обратной связи и доступ к функциям 
-// добавления отзывов
-import { useTheme } from '../ThemeContext';
-import './FeedbackList.css';
+import React, { useCallback } from 'react'; // Импортируем React и хук useCallback для оптимизации функций
+import { useForm } from 'react-hook-form'; // Импортируем хук useForm для управления формами
+import { useFeedback } from './FeedbackContext'; // Импортируем контекст обратной связи для добавления отзывов
+import { useTheme } from '../ThemeContext'; // Импортируем контекст темы для получения информации о текущей теме
+import './FeedbackList.css'; // Импортируем стили для компонента FeedbackList
 
 
 // вызывает хук useForm, чтобы получить методы управления формами
@@ -27,17 +25,16 @@ const FeedbackForm = () => {
     return (
         <form className={`feedback-form ${isDarkTheme ? 'dark' : 'light'}`} onSubmit={handleSubmit(onSubmit)}> {/* связывает 
         обработчик отправки формы с handleSubmit(onSubmit) */}
-            <div className="form-field">
-                <label>Ваше имя:</label>
-                <input {...register('name', { required: true })} placeholder="Введите ваше имя" /> {/*  создает поле для 
-                ввода имени пользователя с обязательной регистрацией (required: true). Использует оператор 
-                распространения ... для регистрации поля с register */}
+            <div className="form-field"> {/* Контейнер для поля ввода имени */}
+                <label>Ваше имя:</label> {/* Метка для поля ввода имени */}
+                <input {...register('name', { required: true })} placeholder="Введите ваше имя" /> {/* Поле ввода имени, регистрируемое в форме */}
             </div>
-            <div className="form-field">
-                <label>Ваш отзыв:</label>
-                <textarea {...register('feedback', { required: true })} placeholder="Введите ваш отзыв" />
+            <div className="form-field"> {/* Контейнер для поля ввода отзыва */}
+                <label>Ваш отзыв:</label> {/* Метка для текстового поля отзыва */}
+                <textarea {...register('feedback', { required: true })} placeholder="Введите ваш отзыв" /> {/* Текстовое поле 
+                для отзыва, регистрируемое в форме */}
             </div>
-            <button type="submit">Отправить отзыв</button>
+            <button type="submit">Отправить отзыв</button> {/* Кнопка для отправки формы */}
         </form>
     );
 };

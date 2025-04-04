@@ -1,7 +1,7 @@
 // components/Counter.js
 import React, { useState } from 'react'; // позволяет добавлять состояние в функциональные компоненты
 
-const Counter = () => { // стрелочная функция, которая будет возвращать JSX
+const Counter = () => { 
 
     // Создает состояние count с помощью хука useState.
 

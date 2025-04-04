@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => {
 
 
     // возвращает ThemeContext.Provider, которому передан объект со значениями isDarkTheme и toggleTheme. 
-    // дДочерние компоненты, переданные в {children}, имеют доступ к этим значениям через контекст
+    // дочерние компоненты, переданные в {children}, имеют доступ к этим значениям через контекст
     return (
         <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
             {children}

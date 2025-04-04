@@ -1,9 +1,9 @@
 // components/Menu.js
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import './Menu.css';
-import { useTheme } from '../ThemeContext';
-import { useLocation } from 'react-router-dom'; // Импортируем useLocation
+import React, { useState, useEffect, useRef } from 'react'; // Импортируем необходимые хуки из React
+import { Link } from 'react-router-dom'; // Импортируем компонент Link для навигации между страницами
+import './Menu.css'; // Импортируем стили для компонента Menu
+import { useTheme } from '../ThemeContext'; // Импортируем хук useTheme для доступа к информации о теме
+import { useLocation } from 'react-router-dom'; // Импортируем useLocation для доступа к текущему URL
 
 const menuItems = [
     { path: '/lab1', label: 'Лабораторная работа № 1' },
@@ -41,7 +41,7 @@ const Menu = () => {
 
         // Если элемент найден, показываем алерт
         if (currentMenuItem) {
-            alert(`Страница "${currentMenuItem.label}" загружена`);
+            alert(`Загрузка страницы "${currentMenuItem.label}"`);
         }
 
         document.addEventListener('mousedown', handleClickOutside);
@@ -52,18 +52,20 @@ const Menu = () => {
     }, [location]); // Добавляем location, чтобы эффект срабатывал при смене URL
 
     return (
-        <div className="menu__container" ref={menuRef}>
-            <button className="menu__button" onClick={toggleMenu}>
-                <span className="menu__icon" />
-                <span className="menu__icon" />
-                <span className="menu__icon" />
+        <div className="menu__container" ref={menuRef}> {/* Контейнер меню с рефом для отслеживания кликов */}
+            <button className="menu__button" onClick={toggleMenu}> {/* Кнопка для открытия/закрытия меню */}
+                <span className="menu__icon" /> {/* Иконка для визуального представления кнопки */}
+                <span className="menu__icon" /> {/* Иконка для визуального представления кнопки */}
+                <span className="menu__icon" /> {/* Иконка для визуального представления кнопки */}
             </button>
-            <nav className={`menu ${isOpen ? 'menu-open' : ''} ${isDarkTheme ? 'dark' : 'light'}`}>
+            <nav className={`menu ${isOpen ? 'menu-open' : ''} ${isDarkTheme ? 'dark' : 'light'}`}> {/* Навигационное 
+            меню с классами в зависимости от состояния и темы */}
                 <ul>
-                    {menuItems.map((item) => (
-                        <li key={item.path}>
-                            <Link to={item.path} onClick={() => setIsOpen(false)}>
-                                {item.label}
+                    {menuItems.map((item) => ( // Проходим по массиву элементов меню
+                        <li key={item.path}> {/* Каждый элемент списка с уникальным ключом по пути */}
+                            <Link to={item.path} onClick={() => setIsOpen(false)}> {/* Ссылка на соответствующий путь, 
+                            закрывающая меню при клике */}
+                                {item.label} {/* Метка элемента меню */}
                             </Link>
                         </li>
                     ))}
