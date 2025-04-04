@@ -19,34 +19,35 @@ const menuItems = [
 ];
 
 const Menu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const { isDarkTheme } = useTheme();
-    const menuRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false); // Состояние для отслеживания открытости меню
+    const { isDarkTheme } = useTheme(); // Получаем информацию о текущей теме (темной или светлой)
+    const menuRef = useRef(null); // Создаем реф для контейнера меню
     const location = useLocation(); // Хук для доступа к текущему URL
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen); // Переключаем состояние открытости меню
     };
 
     const handleClickOutside = (event) => {
+        // Функция для обработки кликов вне меню
         if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setIsOpen(false);
+            setIsOpen(false); // Закрываем меню, если кликнули вне его области
         }
     };
 
 
     useEffect(() => {
-        // Находим элемент меню, соответствующий текущему пути
-        const currentMenuItem = menuItems.find(item => item.path === location.pathname);
+        // Эффект, который срабатывает при изменении URL
+        const currentMenuItem = menuItems.find(item => item.path === location.pathname); // Находим элемент меню по текущему пути
 
-        // Если элемент найден, показываем алерт
+        // Если элемент найден, показываем алёрт с меткой текущего элемента меню
         if (currentMenuItem) {
-            alert(`Загрузка страницы "${currentMenuItem.label}"`);
+            alert(`Загрузка страницы "${currentMenuItem.label}"`); // Показываем алёрт с заголовком страницы
         }
 
-        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside); // Добавляем обработчик события клика мыши
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside); // Удаляем обработчик при размонтировании компонента
         };
         
     }, [location]); // Добавляем location, чтобы эффект срабатывал при смене URL
