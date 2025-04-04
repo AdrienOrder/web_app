@@ -14,7 +14,7 @@ const Header = () => {
     const navigate = useNavigate(); // получаем navigate для навигации
 
     const handleEmailClick = () => {
-        navigate('/profile'); // переход на страницу профиля пользователя
+        navigate('/profile'); // переход на страницу профиля пользователя 
     };
 
     return (
