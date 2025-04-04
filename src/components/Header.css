@@ -1,0 +1,97 @@
+/* Header.css */
+.header {
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.header.light {
+    background-color: #e6e6e6;
+    color: rgb(59, 55, 48);
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.header.dark {
+    background-color: rgb(15, 15, 15);
+    color: #e6e6e6;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+
+.theme-toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #b1b1b1; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+
+.theme-toggle-button:hover {
+    background-color: #808080; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    background-color: #b1b1b1; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.logout-button:hover {
+    background-color: #808080; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+.auth-button {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    background-color: #b1b1b1; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.auth-button:hover {
+    background-color: #808080; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+.user-email {
+    position: absolute;
+    top: 45px;
+    right: 280px;
+    font-family: 'Times-New-Roman', sans-serif; /* Задаем шрифт Roboto */
+    font-size: 17px;
+    margin-left: 10px; /* Отступ слева от других элементов */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+/* Изменение цвета при наведении */
+.user-email:hover {
+    color: rgb(41, 40, 34);
+}

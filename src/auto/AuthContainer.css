@@ -1,0 +1,110 @@
+.auth-container {
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
+    flex-direction: column;
+    width: 550px;
+    background-color: rgb(240, 240, 240); /* Светлый фон */
+    padding: 20px; /* Отступы вокруг контейнера */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для эффекта поднятия */
+}
+
+.auth-container h2 {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+}
+
+.auth-container button {
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 17px;
+    background-color: #a1a1a1;; /* Цвет фона кнопки */
+    color: rgb(44, 44, 44); /* Цвет текста кнопки */
+    margin-top: 20px; /* Отступ сверху для кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругляем углы кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона при наведении */
+}
+
+.auth-container button:hover {
+    background-color: rgb(133, 128, 128); /* Цвет фона кнопки при наведении */
+    color: white; /* Белый текст для темной темы */
+}
+
+
+.auth-container.light {
+    background-color: rgb(240, 240, 240); /* Светлый фон */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.auth-container.dark {
+    background-color: rgb(24, 24, 24); /* Темный фон */
+    color: white; /* Белый текст для темной темы */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.auth-form.light {
+    background-color: #fff; /* Белый фон для светлой темы */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.auth-form.dark {
+    background-color: rgb(59, 59, 59); /* Темный фон для темной темы */
+    color: white; /* Белый текст */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+
+.auth-form {
+    width: 400px; /* или любое другое значение */
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
+    flex-direction: column;
+    align-items: center; /* Выравнивание по центру по горизонтали */
+    padding: 20px; /* Отступы внутри формы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+}
+
+.auth-form div {
+    margin-bottom: 15px; /* Отступы между полями ввода */
+    width: 100%; /* Занимает всю ширину контейнера */
+}
+
+.auth-form label {
+    margin-bottom: 5px; /* Отступ снизу для ярлыков */
+    font-weight: bold; /* Жирный шрифт для ярлыков */
+}
+
+.auth-form input {
+    width: 90%; /* Занимает всю ширину */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Серая рамка */
+    border-radius: 4px; /* Скругляем углы полей ввода */
+    background-color: #cfcfcf; /* Цвет фона полей ввода (светло-серый) */
+}
+
+.auth-form input:focus {
+    border-color: #585858; /* Цвет рамки при фокусировке */
+    outline: none; /* Убираем стандартный outline */
+}
+
+.auth-form span {
+    color: red; /* Цвет для сообщений об ошибках */
+    font-size: 12px; /* Размер шрифта для сообщений об ошибках */
+}
+
+.auth-form button {
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 17px;
+    padding: 10px 20px; /* Внутренние отступы у кнопки */
+    background-color: #a1a1a1;; /* Цвет фона кнопки */
+    color: rgb(44, 44, 44); /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругляем углы кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+}
+
+.auth-form button:hover {
+    background-color: rgb(129, 129, 129); /* Цвет фона кнопки при наведении */
+    color: white; /* Белый текст для темной темы */
+}

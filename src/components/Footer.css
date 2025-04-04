@@ -1,0 +1,41 @@
+    .footer {
+        display: flex;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 10;
+        margin-top: auto; /* Чтобы футер прижимался к низу, если контента мало */
+    }
+    
+    .footer-content {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    
+    .footer-nav {
+        margin-top: 10px;
+    }
+    
+    .footer-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    
+    .footer-link:hover {
+        text-decoration: underline;
+    }
+
+    .footer.light {
+        background-color: #302e29; /* Цвет фона для светлой темы */
+        color: #e6e6e6; /* Цвет текста для светлой темы */
+        font-family: 'Times-New-Roman', sans-serif; /* Используем Roboto */
+        transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+    }
+    
+    .footer.dark {
+        background-color: rgb(17, 17, 17); /* Цвет фона для темной темы */
+        color: #e6e6e6; /* Цвет текста для темной темы */
+        font-family: 'Times-New-Roman', sans-serif; /* Используем Roboto */
+        transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+    }

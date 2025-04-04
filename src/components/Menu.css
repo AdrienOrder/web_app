@@ -1,0 +1,70 @@
+/* Menu.css */
+.menu__container {
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+}
+
+.menu__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px; /* Поднимаем кнопку на 5 пикселей */
+}
+
+.menu__icon {
+    width: 30px;
+    height: 5px;
+    background-color: #333; /* Цвет черт */
+    margin: 3px 0;
+}
+
+.menu {
+    display: none; /* Скрываем меню по умолчанию */
+    position: absolute; /* Позиционируем меню */
+    top: 0; /* Расположение под кнопкой */
+    left: 60px; /* Увеличиваем отступ от кнопки */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.menu.light {
+    background-color: #e6e6e6d3; /* Цвет фона меню */
+    color: #333333; /* Цвет текста для светлой темы */
+}
+
+.menu.dark {
+    background-color: rgba(15, 15, 15, 0.829); /* Цвет фона для темной темы */
+    color: #e6e6e6; /* Цвет текста для темной темы */
+}
+
+.menu-open {
+    display: block; /* Показываем меню при открытии */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px 30px;
+    text-align: center; /* Центрируем текст в каждом элементе списка */
+}
+
+.menu li a {
+    font-family: 'Times-New-Roman', sans-serif; 
+    text-decoration: none;
+    font-size: 19px; /* Увеличиваем размер шрифта */
+    color: inherit; /* Устанавливаем цвет текста в зависимости от родителя */
+}
+
+.menu li a:hover {
+    background-color: #a1a1a1; /* Цвет при наведении */
+}
+
+.menu li a:active,
+.menu li a:focus {
+    color: inherit; /* Цвет текста при нажатии и фокусе остается прежним */
+}

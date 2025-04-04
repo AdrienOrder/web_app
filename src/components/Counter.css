@@ -1,0 +1,17 @@
+/* Counter.css */
+.counter-button {
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 16px; /* увеличиваем размер шрифта */
+    padding: 10px 20px; /* увеличиваем внутренние отступы кнопки */
+    margin: 5px; /* добавляем отступ между кнопками */
+    background-color: #cacaca;
+    color: rgb(59, 55, 48);
+    border: none; /* убираем границу */
+    border-radius: 5px; /* скругленные углы */
+    cursor: pointer; /* добавляем указатель при наведении */
+    transition: background-color 0.3s; /* анимация при наведении */
+}
+
+.counter-button:hover {
+    background-color: #808080; /* более темный цвет при наведении */
+}

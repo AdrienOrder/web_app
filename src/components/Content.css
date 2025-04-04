@@ -1,0 +1,39 @@
+.content {
+    margin-top: 20px; /* Увеличьте значение по мере необходимости */
+    padding: 60px; /* Увеличиваем отступы */
+    width: 100%; /* Занимаем всю ширину */
+    box-sizing: border-box; /* Учитываем отступы и рамки в ширине */
+    min-height: 713px; /* Устанавливаем минимальную высоту */
+    font-size: 20px; /* Увеличиваем размер шрифта для всего содержимого */
+    text-align: center; /* Центрируем текст для всего содержимого */
+}
+
+.content.light {
+    color: #302e29; /* Цвет текста для светлой темы */
+    font-family: 'Times-New-Roman', sans-serif; 
+    font-size: 20px; /* Увеличиваем размер заголовка */
+    margin-top: 90px; /* Добавляем отступ сверху для заголовка */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+
+}
+
+.content.dark {
+    color: #e6e6e6; /* Цвет текста для темной темы */
+    font-family: 'Times-New-Roman', sans-serif; 
+    font-size: 20px; /* Увеличиваем размер заголовка */
+    margin-top: 90px; /* Добавляем отступ сверху для заголовка */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.content h2 {
+    font-family: 'Times-New-Roman', sans-serif; 
+
+}
+
+.content img.slider-image {
+    width: 1700px; /* Задайте нужную ширину */
+    border-radius: 8px; /* Закругление углов изображения */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для изображения */
+    object-fit: cover; /* Сохраняет пропорции и обрезает изображение, чтобы заполнить контейнер */
+    margin: 0 auto; /* Центрирует изображение по горизонтали */
+}

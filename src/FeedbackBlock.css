@@ -1,0 +1,43 @@
+/* FeedbackBlock.css */
+.feedback-block {
+    max-width: 100%; /* Максимальная ширина блока */
+    margin: 0 auto; /* Центрирование блока по горизонтали */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+
+.feedback-block.light {
+    text-align: center; /* Выравнивание заголовка по центру */
+    background-color: #ffffff; /* Цвет фона для светлой темы */
+    color: #000; /* Цвет текста для светлой темы */
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.feedback-block.dark {
+    text-align: center; /* Выравнивание заголовка по центру */
+    background-color: #444444; /* Цвет фона для темной темы */
+    color: #ffffff; /* Цвет текста для темной темы */
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавный переход для фона и цвета текста */
+}
+
+button {
+    background-color: #b1b1b1; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Times-New-Roman', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    margin-top: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #808080; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
