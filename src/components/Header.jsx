@@ -11,7 +11,7 @@ const Header = () => {
     // и функции для переключения темы toggleTheme
     const { isAuthenticated, logout, userEmail } = useAuth(); // использует хук useAuth для получения данных о статусе 
     // аутентификации пользователя (isAuthenticated), функции выхода (logout) и электронной почте пользователя (userEmail)
-    const navigate = useNavigate(); // получаем navigate для навигации
+    const navigate = useNavigate(); // получаем navigate для навигации 
 
     const handleEmailClick = () => {
         navigate('/profile'); // переход на страницу профиля пользователя 
