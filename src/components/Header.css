@@ -1,7 +1,7 @@
 /* Header.css */
 .header {
     display: flex;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 10;
@@ -22,7 +22,7 @@
 
 .theme-toggle-button {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 20px;
     background-color: #b1b1b1; /* Цвет фона кнопки */
     color: rgb(59, 55, 48); /* Цвет текста кнопки */
@@ -43,7 +43,7 @@
 
 .logout-button {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 180px;
     background-color: #b1b1b1; /* Цвет фона кнопки */
     color: rgb(59, 55, 48); /* Цвет текста кнопки */
@@ -63,7 +63,7 @@
 
 .auth-button {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 180px;
     background-color: #b1b1b1; /* Цвет фона кнопки */
     color: rgb(59, 55, 48); /* Цвет текста кнопки */
