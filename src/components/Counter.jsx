@@ -18,6 +18,16 @@ const Counter = () => {
     const decrement = () => {
         setCount(prevCount => prevCount - 1);
     };
+    
+    
+    /*
+        setCount(count  + 1);
+    };
+
+    const decrement = () => {
+        setCount(count - 1);
+    }; */
+
 
     return (
         <div>
